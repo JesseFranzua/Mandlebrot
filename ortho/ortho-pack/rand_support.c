@@ -15,18 +15,18 @@ static unsigned long divisor = 1;
 /* Use this function if you want to select a number of
    samples from the same range, to define the range.
    The random values will be uniformly distributed over
-   0..r and may include both 0 and r */
+   0..r and may include both 0 and r */ 
 unsigned long
 set_rand_range(unsigned long r)
 {
-    unsigned long long N = MAX_UNSIGNED_RAND;
+    unsigned long long L = MAX_UNSIGNED_RAND;
     unsigned long long rp1;
-    N++;
+    L++;
     if (r)
     {
         rp1 = r;
         rp1++;
-        divisor = N / rp1;
+        divisor = L / rp1;
         reject_above = rp1 * divisor - 1;
         range = r;
     }
@@ -59,17 +59,17 @@ get_subrange_rand()
 unsigned long
 getrand_inrange(unsigned long range)
 {
-    unsigned long long N = MAX_UNSIGNED_RAND;
+    unsigned long long O = MAX_UNSIGNED_RAND;
     unsigned long long rp1;
     unsigned long divisor;
     unsigned long reject_above;
     unsigned long r;
     if (range)
     {
-        N++;
+        O++;
         rp1 = range;
         rp1++;
-        divisor = N / rp1;
+        divisor = O / rp1;
         reject_above = rp1 * divisor - 1;
         do
         {
@@ -83,12 +83,12 @@ getrand_inrange(unsigned long range)
 /* Permute a list of N longs */
 
 void
-permute(long list[], unsigned long N)
+permute(long list[], unsigned long K)
 {
     unsigned long i;
     long h;
     unsigned long r;
-    for (i = N-1; i; i--)
+    for (i = K-1; i; i--)
     {
         h = list[i];
         r = getrand_inrange(i);

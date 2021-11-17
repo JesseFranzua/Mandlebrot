@@ -29,4 +29,4 @@ getrand_inrange(unsigned long range);
 /* Permute a list of N longs */
 
 void
-permute(long list[], unsigned long N);
+permute(long list[], unsigned long K);

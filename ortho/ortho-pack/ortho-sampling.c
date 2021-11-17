@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <unistd.h>
+// #include <unistd.h>
 #include <io.h>
 #include "mt19937.h"
 #include <windows.h>
@@ -11,7 +11,7 @@
 
 #define MAJOR	   9999
 #define SAMPLES    (MAJOR * MAJOR)
-// #define RUNS        1
+#define RUNS        1
 
 /* We will have a total of SAMPLES samples, one in each of the MAJOR * MAJOR cells.
    Within each MAJOR row or column, we will have MAJOR minor rows/columns, such that
@@ -76,7 +76,7 @@ main()
                    The random long double value selects a random point in the minor subsquare
                  */
                 x = -2.0 + scale * (xlist[i][j] + (long double) genrand_real2());
-
+                printf("%d", x);
                 /* For a given subsquare row, every subsquare has its sample in a different 
                    row of cells */
                 y = -2.0 + scale * (ylist[j][i] + (long double) genrand_real2());
@@ -86,5 +86,7 @@ main()
         }
     }
     /* Postprocessing */
+    
+
     return 0;
 }
