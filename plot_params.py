@@ -3,6 +3,8 @@ import seaborn as sns
 
 sns.set_context('talk')
 
+plt.rcParams['mathtext.fontset'] = 'stix'
+plt.rcParams['font.family'] = 'STIXGeneral'
 plt.rcParams['xtick.major.size']  = 5
 plt.rcParams['xtick.major.width'] = 1
 plt.rcParams['xtick.minor.size']  = 2
