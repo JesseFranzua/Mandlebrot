@@ -3,8 +3,6 @@ import seaborn as sns
 
 sns.set_context('talk')
 
-plt.rcParams['mathtext.fontset'] = 'stix'
-plt.rcParams['font.family'] = 'STIXGeneral'
 plt.rcParams['xtick.major.size']  = 5
 plt.rcParams['xtick.major.width'] = 1
 plt.rcParams['xtick.minor.size']  = 2
@@ -18,4 +16,6 @@ plt.rcParams['ytick.direction']   = 'in'
 plt.rcParams['xtick.major.pad']   = 8
 plt.rcParams['xtick.top']         = True
 plt.rcParams['ytick.right']       = True
-plt.rcParams["figure.figsize"]    = (6, 6)
+plt.rcParams["figure.figsize"]    = (7, 6)
+plt.rcParams["mathtext.fontset"]  = 'stix'
+plt.rcParams["font.family"]       = 'STIXGeneral'
